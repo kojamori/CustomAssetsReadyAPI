@@ -1,6 +1,6 @@
 # CustomAssetsReadyAPI
 
-A simple API mod for Spaceflight Simulator (SFS) that signals when all custom assets (parts, textures, etc.) are fully loaded and ready to use.
+A simple API mod for Spaceflight Simulator (SFS) that signals when all custom assets (parts, textures, solar systems.) are fully loaded and ready to use.
 Custom assets are always loaded after SFS has loaded the default game assets as well, and therefore this mod should also be used if you're writing a mod that depends on not just custom assets, but also the base game assets to be fully loaded.
 
 ## What does it do?
@@ -13,12 +13,20 @@ Custom assets are always loaded after SFS has loaded the default game assets as 
 
 1. Add `CustomAssetsReadyAPI` as a dependency in your mod.
 2. Subscribe to the event in your mod's `Load()` method:
+3. or check the `CustomAssetsReadyAPI.CustomAssetsReady.Ready` property if you need to check if custom assets are already loaded.
 
 ```csharp
 CustomAssetsReadyAPI.CustomAssetsReady.OnCustomAssetsReady += () =>
 {
     // Your code that needs custom assets
 };
+
+// or
+
+if (CustomAssetsReadyAPI.CustomAssetsReady.Ready)
+{
+    // Your code that needs custom assets
+}
 ```
 
 ## Why do I need this?

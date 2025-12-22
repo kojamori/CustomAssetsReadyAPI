@@ -13,11 +13,13 @@ namespace CustomAssetsReadyAPI
                 await UniTask.Yield();
 
             OnCustomAssetsReady?.Invoke();
+            Ready = true;
         }
 
         /// <summary>
         /// Event fired when CustomAssetsLoader.finishedLoading is true.
         /// </summary>
         public static event Action OnCustomAssetsReady;
+        public static bool Ready { get; private set; }
     }
 }
