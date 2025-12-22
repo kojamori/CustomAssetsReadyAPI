@@ -20,6 +20,6 @@ namespace CustomAssetsReadyAPI
         /// Event fired when CustomAssetsLoader.finishedLoading is true.
         /// </summary>
         public static event Action OnCustomAssetsReady;
-        public static bool Ready { get; private set; }
+        public static bool IsReady { get; private set; }
     }
 }
