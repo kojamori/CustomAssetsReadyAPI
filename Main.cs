@@ -21,11 +21,11 @@ namespace CustomAssetsReadyAPI
         public override string DisplayName => "Custom Assets Ready API";
         public override string Author => "Koja Mori";
         public override string Description => "Signals when CustomAssetsLoader.finishedLoading is true. Other mods can listen for the event.";
-        public override string ModVersion => "1.0.0";
+        public override string ModVersion => "2.0.0";
         public override string MinimumGameVersionNecessary => "1.6.00.0";
         public override Dictionary<string, string> Dependencies => null;
 
-        public override void Load()
+        public override void Early_Load()
         {
             Debug.Log($"[{DisplayName}] Waiting for custom assets to be loaded...");
 
@@ -35,6 +35,11 @@ namespace CustomAssetsReadyAPI
             };
 
             CustomAssetsReady.WaitForCustomAssetsAsync();
+        }
+
+        public override void Load()
+        {
+            // ...
         }
     }
 }
