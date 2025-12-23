@@ -5,6 +5,8 @@ Custom assets are always loaded after SFS has loaded the default game assets as 
 
 As of the 1.6.00.0 beta, custom solar systems are also considered custom assets, so this API is useful for mods that need to access custom planets as well.
 
+Forum post: [https://jmnet.one/sfs/forum/index.php?threads/customassetsreadyapi-dependency.16906/](https://jmnet.one/sfs/forum/index.php?threads/customassetsreadyapi-dependency.16906/)
+
 ## What does it do?
 
 - Waits for SFS to finish loading all custom assets.
