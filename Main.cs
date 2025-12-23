@@ -18,7 +18,7 @@ namespace CustomAssetsReadyAPI
         }
 
         public override string ModNameID => "customassetsreadyapi";
-        public override string DisplayName => "Custom Assets Ready API";
+        public override string DisplayName => "CustomAssetsReadyAPI";
         public override string Author => "Koja Mori";
         public override string Description => "Signals when CustomAssetsLoader.finishedLoading is true. Other mods can listen for the event.";
         public override string ModVersion => "2.0.0";

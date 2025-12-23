@@ -13,7 +13,7 @@ namespace CustomAssetsReadyAPI
                 await UniTask.Yield();
 
             OnCustomAssetsReady?.Invoke();
-            Ready = true;
+            IsReady = true;
         }
 
         /// <summary>
